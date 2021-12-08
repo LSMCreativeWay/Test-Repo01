@@ -31,5 +31,4 @@ jobs:
           from: ${{ secrets.EMAIL_ACCOUNT }}
           to: ${{ secrets.EMAIL_TARGET }}
           subject: 天气
-          body: file://result.html
-          contentType: text/html
+          body: "test"
