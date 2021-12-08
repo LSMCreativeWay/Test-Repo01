@@ -21,14 +21,15 @@ jobs:
       - name: 'Get weather forecast'
         run: bash ./weather.sh
       - name: 'Send mail'
-        uses: dawidd6/action-send-mail@master
+        uses: devellany/send-mail@v1.0.2
         with:
-          serveraddress: smtp-mail.outlook.com
-          serverport: 587
-          username: ${{ secrets.EMAIL_ACCOUNT }}
+          host: smtp-mail.outlook.com
+          port: 587
+          account: ${{ secrets.EMAIL_ACCOUNT }}
           password: ${{ secrets.EMAIL_PASS }}
-          subject: 天气信息
-          body: file://result.html
+          sender: LSMCreativeWay
+          from: ${{ secrets.EMAIL_ACCOUNT }}
           to: ${{ secrets.EMAIL_TARGET }}
-          from: GitHub Actions
-          content_type: text/html
+          subject: '天气'
+          body: file://result.html
+          contentType: text/html
