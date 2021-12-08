@@ -32,3 +32,4 @@ jobs:
           to: ${{ secrets.EMAIL_TARGET }}
           subject: 天气
           body: "test"
+          contentType: text/html
