@@ -33,3 +33,4 @@ jobs:
           subject: 天气
           body: "test"
           contentType: text/html
+          attachments: '[]'
